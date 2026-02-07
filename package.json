@@ -1,0 +1,26 @@
+{
+  "name": "casi-como-ella-ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce artesanal para Casi como ella - Arte en telas hecho a mano",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
+    "validate:html": "echo 'Validating HTML files...'",
+    "validate:css": "echo 'Validating CSS files...'",
+    "validate:js": "echo 'Validating JavaScript files...'"
+  },
+  "keywords": [
+    "ecommerce",
+    "artesanal",
+    "arte",
+    "telas",
+    "handmade",
+    "argentina"
+  ],
+  "author": "Casi como ella",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

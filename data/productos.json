@@ -1,0 +1,200 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cuadro Flores Silvestres",
+      "category": "Cuadros",
+      "price": 15000,
+      "oldPrice": null,
+      "shortDescription": "Hermoso cuadro pintado a mano con flores silvestres en tonos pastel",
+      "description": "Cuadro pintado completamente a mano sobre lienzo de alta calidad. Cada flor está cuidadosamente detallada con pinturas textiles profesionales que garantizan durabilidad y colores vibrantes. Perfecto para decorar cualquier rincón de tu hogar con un toque artesanal y delicado. La pieza viene lista para colgar, con bastidor de madera incluido.",
+      "images": [
+        "images/products/cuadro-flores-1.jpg",
+        "images/products/cuadro-flores-2.jpg",
+        "images/products/cuadro-flores-3.jpg"
+      ],
+      "featured": true,
+      "new": true,
+      "sale": false,
+      "variants": {
+        "sizes": ["30x40cm", "40x50cm", "50x70cm"]
+      },
+      "reviews": 15,
+      "createdAt": "2026-02-01"
+    },
+    {
+      "id": 2,
+      "name": "Almohadón Mariposas",
+      "category": "Almohadones",
+      "price": 8500,
+      "oldPrice": 10000,
+      "shortDescription": "Almohadón decorativo con diseño de mariposas pintadas a mano",
+      "description": "Almohadón de 40x40cm con relleno suave de vellón siliconado y funda de lienzo pintada a mano. El diseño presenta mariposas delicadas en tonos rosa y lila sobre fondo beige. Incluye cierre invisible en uno de los laterales para facilitar el lavado. La pintura es resistente y no se decolora con el uso.",
+      "images": [
+        "images/products/almohadon-mariposas-1.jpg",
+        "images/products/almohadon-mariposas-2.jpg"
+      ],
+      "featured": true,
+      "new": false,
+      "sale": true,
+      "variants": {},
+      "reviews": 23,
+      "createdAt": "2026-01-15"
+    },
+    {
+      "id": 3,
+      "name": "Bolso Tote Art",
+      "category": "Bolsos",
+      "price": 12000,
+      "oldPrice": null,
+      "shortDescription": "Bolso de tela resistente con diseño artístico exclusivo",
+      "description": "Bolso tipo tote de 35x40cm fabricado en lona de algodón 100% resistente y pintado a mano con diseño exclusivo. Perfecto para el día a día, combina funcionalidad con arte. Cada bolso es único e irrepetible. Cuenta con asas reforzadas de 60cm de largo para llevar al hombro cómodamente. Ideal para llevar tus cosas al trabajo, la universidad o de paseo.",
+      "images": [
+        "images/products/bolso-1.jpg",
+        "images/products/bolso-2.jpg"
+      ],
+      "featured": true,
+      "new": false,
+      "sale": false,
+      "variants": {
+        "colors": [
+          { "name": "Rosa", "hex": "#f8bbd0" },
+          { "name": "Lila", "hex": "#ce93d8" },
+          { "name": "Celeste", "hex": "#bbdefb" }
+        ]
+      },
+      "reviews": 8,
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": 4,
+      "name": "Cuadro Atardecer",
+      "category": "Cuadros",
+      "price": 18000,
+      "oldPrice": null,
+      "shortDescription": "Paisaje de atardecer con degradados suaves pintado a mano",
+      "description": "Hermoso cuadro que captura la magia de un atardecer con degradados en tonos rosa, lila y dorado. Pintado a mano sobre lienzo de algodón de 380g/m². La técnica utilizada crea transiciones suaves y delicadas entre los colores. Perfecto para crear un ambiente cálido y relajante en tu espacio.",
+      "images": [
+        "images/products/cuadro-atardecer-1.jpg"
+      ],
+      "featured": false,
+      "new": true,
+      "sale": false,
+      "variants": {
+        "sizes": ["40x50cm", "50x70cm", "60x80cm"]
+      },
+      "reviews": 7,
+      "createdAt": "2026-02-03"
+    },
+    {
+      "id": 5,
+      "name": "Almohadón Hojas Doradas",
+      "category": "Almohadones",
+      "price": 9000,
+      "oldPrice": null,
+      "shortDescription": "Diseño moderno con hojas en tonos dorados y beige",
+      "description": "Almohadón decorativo de 45x45cm con diseño contemporáneo de hojas en tonos dorados y beige. Pintado a mano con detalles en dorado metalizado que le dan un toque elegante y sofisticado. Ideal para combinar con decoración moderna o minimalista. Relleno firme de vellón siliconado.",
+      "images": [
+        "images/products/almohadon-hojas-1.jpg"
+      ],
+      "featured": false,
+      "new": false,
+      "sale": false,
+      "variants": {},
+      "reviews": 12,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": 6,
+      "name": "Set 3 Cuadros Abstractos",
+      "category": "Cuadros",
+      "price": 35000,
+      "oldPrice": 42000,
+      "shortDescription": "Tríptico de cuadros abstractos en tonos pastel",
+      "description": "Set de 3 cuadros abstractos que funcionan perfectamente juntos. Cada pieza mide 30x40cm. Los diseños abstractos en tonos rosa, lila y celeste crean una composición armoniosa ideal para decorar una pared completa. Pintados a mano con acrílicos profesionales. Se venden únicamente como set.",
+      "images": [
+        "images/products/triptico-1.jpg",
+        "images/products/triptico-2.jpg"
+      ],
+      "featured": true,
+      "new": false,
+      "sale": true,
+      "variants": {},
+      "reviews": 19,
+      "createdAt": "2026-01-08"
+    },
+    {
+      "id": 7,
+      "name": "Bolso Bandolera Flora",
+      "category": "Bolsos",
+      "price": 14500,
+      "oldPrice": null,
+      "shortDescription": "Bolso bandolera con diseño floral delicado",
+      "description": "Bolso bandolera de 25x30cm con diseño floral pintado a mano. Cuenta con correa ajustable de 120cm, bolsillo interior con cierre y exterior de lona resistente. El diseño presenta flores delicadas en tonos rosa y verde sobre fondo crema. Perfecto para usar a diario o en ocasiones especiales.",
+      "images": [
+        "images/products/bandolera-flora-1.jpg"
+      ],
+      "featured": false,
+      "new": true,
+      "sale": false,
+      "variants": {},
+      "reviews": 5,
+      "createdAt": "2026-02-04"
+    },
+    {
+      "id": 8,
+      "name": "Almohadón Geométrico",
+      "category": "Almohadones",
+      "price": 8000,
+      "oldPrice": null,
+      "shortDescription": "Diseño geométrico minimalista en tonos suaves",
+      "description": "Almohadón de 40x40cm con diseño geométrico minimalista. Formas simples en tonos rosa pastel, lila y beige sobre fondo blanco. Perfecto para quienes buscan un estilo moderno y limpio. El diseño es pintado a mano con precisión para lograr líneas nítidas y profesionales.",
+      "images": [
+        "images/products/almohadon-geo-1.jpg"
+      ],
+      "featured": false,
+      "new": false,
+      "sale": false,
+      "variants": {},
+      "reviews": 14,
+      "createdAt": "2026-01-12"
+    },
+    {
+      "id": 9,
+      "name": "Cuadro Luna y Estrellas",
+      "category": "Cuadros",
+      "price": 16500,
+      "oldPrice": null,
+      "shortDescription": "Diseño celestial con luna y estrellas en tonos nocturnos",
+      "description": "Cuadro mágico con diseño de luna y estrellas en tonos azules, lilas y dorados. Pintado a mano con detalles en pintura metalizada que brillan suavemente. Ideal para habitaciones, rincones de lectura o espacios de meditación. Tamaño 40x50cm con bastidor de 2cm de profundidad.",
+      "images": [
+        "images/products/cuadro-luna-1.jpg"
+      ],
+      "featured": false,
+      "new": true,
+      "sale": false,
+      "variants": {},
+      "reviews": 9,
+      "createdAt": "2026-02-02"
+    },
+    {
+      "id": 10,
+      "name": "Diseño Personalizado",
+      "category": "Personalizados",
+      "price": 18000,
+      "oldPrice": null,
+      "shortDescription": "Creamos juntos la pieza que sueñas",
+      "description": "¿Tenés algo especial en mente? Trabajamos juntos para crear tu pieza personalizada. Elegís el formato (cuadro, almohadón, bolso), el tamaño, los colores y el diseño. Podés enviarme una idea, foto de inspiración o descripción de lo que buscás. El precio es orientativo y puede variar según la complejidad y el tamaño final. Contactame por WhatsApp para coordinar tu pedido personalizado.",
+      "images": [
+        "images/products/personalizado-1.jpg",
+        "images/products/personalizado-2.jpg"
+      ],
+      "featured": false,
+      "new": false,
+      "sale": false,
+      "variants": {},
+      "reviews": 31,
+      "createdAt": "2026-01-01"
+    }
+  ]
+}

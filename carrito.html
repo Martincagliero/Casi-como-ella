@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras - Casi como ella">
+    <title>Carrito - Casi como ella</title>
+        <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Logo Casi como ella" class="logo-img">
+                    <h1>Casi como ella</h1>
+                </a>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Mi Carrito</h1>
+            <p>Revisa tus productos seleccionados</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-grid">
+                <!-- Cart Items -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Resumen del pedido</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Envío:</span>
+                        <span id="shipping">A calcular</span>
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row summary-total">
+                        <span>Total:</span>
+                        <span id="total">$0</span>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block" id="checkoutBtn">
+                        Finalizar compra
+                    </button>
+                    
+                    <a href="galeria.html" class="btn btn-outline btn-block">
+                        Ver galería
+                    </a>
+                    
+                    <div class="payment-methods">
+                        <p class="payment-title">Aceptamos:</p>
+                        <div class="payment-icons">
+                            <i class="fas fa-credit-card" title="Mercado Pago"></i>
+                            <i class="fas fa-university" title="Transferencia bancaria"></i>
+                            <i class="fab fa-cc-visa" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Casi como ella</h3>
+                    <p>Arte en telas hecho a mano con amor y dedicación.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/casi.como.ella" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/casi.como.ella" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="sobre-mi.html">Sobre mí</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#pagos">Métodos de pago</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +54 9 11 XXXX-XXXX</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sunchales, Santa Fe</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Casi como ella. Hecho con <i class="fas fa-heart"></i> en Argentina</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">Desarrollado por <strong>Martin Cagliero</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5491XXXXXXXXX?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20tus%20creaciones" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

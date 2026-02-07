@@ -1,0 +1,218 @@
+{
+  "categorias": {
+    "cartucheras": {
+      "nombre": "Cartucheras",
+      "descripcion": "Cartucheras artesanales únicas para tus útiles favoritos",
+      "imagenes": [
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.34 (1).jpeg",
+          "alt": "Cartuchera artesanal pintada a mano",
+          "titulo": "Cartuchera 1"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.34 (2).jpeg",
+          "alt": "Cartuchera con diseño único",
+          "titulo": "Cartuchera 2"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.34 (3).jpeg",
+          "alt": "Cartuchera artesanal colorida",
+          "titulo": "Cartuchera 3"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.38 (2).jpeg",
+          "alt": "Cartuchera decorada a mano",
+          "titulo": "Cartuchera 4"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.39 (1).jpeg",
+          "alt": "Cartuchera con ilustraciones",
+          "titulo": "Cartuchera 5"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.39 (2).jpeg",
+          "alt": "Cartuchera artesanal personalizada",
+          "titulo": "Cartuchera 6"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.39.jpeg",
+          "alt": "Cartuchera pintada",
+          "titulo": "Cartuchera 7"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.43 (1).jpeg",
+          "alt": "Cartuchera con diseño floral",
+          "titulo": "Cartuchera 8"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.43.jpeg",
+          "alt": "Cartuchera artesanal única",
+          "titulo": "Cartuchera 9"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.44.jpeg",
+          "alt": "Cartuchera decorativa",
+          "titulo": "Cartuchera 10"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.51 (1).jpeg",
+          "alt": "Cartuchera pintada a mano",
+          "titulo": "Cartuchera 11"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.51.jpeg",
+          "alt": "Cartuchera artesanal colorida",
+          "titulo": "Cartuchera 12"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.52.jpeg",
+          "alt": "Cartuchera con diseños únicos",
+          "titulo": "Cartuchera 13"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.54 (1).jpeg",
+          "alt": "Cartuchera artesanal decorada",
+          "titulo": "Cartuchera 14"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.54.jpeg",
+          "alt": "Cartuchera personalizada",
+          "titulo": "Cartuchera 15"
+        },
+        {
+          "src": "images/gallery/cartucheras/WhatsApp Image 2026-02-06 at 20.15.55 (2).jpeg",
+          "alt": "Cartuchera artesanal original",
+          "titulo": "Cartuchera 16"
+        }
+      ]
+    },
+    "fundas": {
+      "nombre": "Fundas",
+      "descripcion": "Fundas protectoras con estilo para tus dispositivos",
+      "imagenes": [
+        {
+          "src": "images/gallery/fundas/WhatsApp Image 2026-02-06 at 20.15.28.jpeg",
+          "alt": "Funda artesanal pintada a mano",
+          "titulo": "Funda 1"
+        },
+        {
+          "src": "images/gallery/fundas/WhatsApp Image 2026-02-06 at 20.15.37 (1).jpeg",
+          "alt": "Funda con diseño único",
+          "titulo": "Funda 2"
+        },
+        {
+          "src": "images/gallery/fundas/WhatsApp Image 2026-02-06 at 20.15.56 (2).jpeg",
+          "alt": "Funda artesanal decorada",
+          "titulo": "Funda 3"
+        }
+      ]
+    },
+    "estuches": {
+      "nombre": "Estuches",
+      "descripcion": "Estuches versátiles para organizar con estilo",
+      "imagenes": [
+        {
+          "src": "images/gallery/estuches/WhatsApp Image 2026-02-06 at 20.15.34.jpeg",
+          "alt": "Estuche artesanal pintado a mano",
+          "titulo": "Estuche 1"
+        },
+        {
+          "src": "images/gallery/estuches/WhatsApp Image 2026-02-06 at 20.15.52 (1).jpeg",
+          "alt": "Estuche con diseño único",
+          "titulo": "Estuche 2"
+        },
+        {
+          "src": "images/gallery/estuches/WhatsApp Image 2026-02-06 at 20.15.54 (2).jpeg",
+          "alt": "Estuche artesanal decorado",
+          "titulo": "Estuche 3"
+        }
+      ]
+    },
+    "bolsos": {
+      "nombre": "Bolsos",
+      "descripcion": "Bolsos artesanales que cuentan una historia",
+      "imagenes": [
+        {
+          "src": "images/gallery/bolsos/WhatsApp Image 2026-02-06 at 20.15.50 (1).jpeg",
+          "alt": "Bolso artesanal pintado a mano",
+          "titulo": "Bolso 1"
+        },
+        {
+          "src": "images/gallery/bolsos/WhatsApp Image 2026-02-06 at 20.15.50.jpeg",
+          "alt": "Bolso con diseño único",
+          "titulo": "Bolso 2"
+        },
+        {
+          "src": "images/gallery/bolsos/WhatsApp Image 2026-02-06 at 20.15.53.jpeg",
+          "alt": "Bolso artesanal decorado",
+          "titulo": "Bolso 3"
+        }
+      ]
+    },
+    "otros": {
+      "nombre": "Otros",
+      "descripcion": "Otras creaciones artesanales únicas",
+      "imagenes": [
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.37.jpeg",
+          "alt": "Creación artesanal 1",
+          "titulo": "Otro 1"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.38 (1).jpeg",
+          "alt": "Creación artesanal 2",
+          "titulo": "Otro 2"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.38.jpeg",
+          "alt": "Creación artesanal 3",
+          "titulo": "Otro 3"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.43 (2).jpeg",
+          "alt": "Creación artesanal 4",
+          "titulo": "Otro 4"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.50 (2).jpeg",
+          "alt": "Creación artesanal 5",
+          "titulo": "Otro 5"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.53 (1).jpeg",
+          "alt": "Creación artesanal 6",
+          "titulo": "Otro 6"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.55 (1).jpeg",
+          "alt": "Creación artesanal 7",
+          "titulo": "Otro 7"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.55.jpeg",
+          "alt": "Creación artesanal 8",
+          "titulo": "Otro 8"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.56 (1).jpeg",
+          "alt": "Creación artesanal 9",
+          "titulo": "Otro 9"
+        },
+        {
+          "src": "images/gallery/otros/WhatsApp Image 2026-02-06 at 20.15.56.jpeg",
+          "alt": "Creación artesanal 10",
+          "titulo": "Otro 10"
+        }
+      ]
+    }
+  },
+  "configuracion": {
+    "lazyLoading": false,
+    "gridColumns": {
+      "mobile": 1,
+      "tablet": 2,
+      "desktop": 3
+    },
+    "animaciones": true
+  }
+}

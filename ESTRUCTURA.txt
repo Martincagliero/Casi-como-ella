@@ -1,0 +1,249 @@
+CASI COMO ELLA - ECOMMERCE ARTESANAL
+=====================================
+
+Proyecto completo creado el: 6 de febrero de 2026
+
+ESTRUCTURA DEL PROYECTO:
+========================
+
+casi como ella/
+│
+├── 📄 ARCHIVOS HTML (Páginas del sitio)
+│   ├── index.html              ✅ Página principal con hero, productos destacados
+│   ├── productos.html          ✅ Catálogo completo con filtros
+│   ├── producto.html           ✅ Página de detalle de producto
+│   ├── carrito.html            ✅ Carrito de compras
+│   ├── checkout.html           ✅ Proceso de pago
+│   ├── sobre-mi.html           ✅ Historia de la marca
+│   ├── faq.html                ✅ Preguntas frecuentes
+│   └── gracias.html            ✅ Página de confirmación de pedido
+│
+├── 🎨 CSS (Estilos)
+│   ├── css/
+│   │   ├── main.css            ✅ Estilos generales y variables
+│   │   ├── home.css            ✅ Estilos del home e Instagram
+│   │   ├── productos.css       ✅ Estilos de catálogo y detalle
+│   │   └── carrito.css         ✅ Estilos de carrito y checkout
+│
+├── ⚙️ JAVASCRIPT (Funcionalidad)
+│   ├── js/
+│   │   ├── main.js             ✅ Funciones generales y carrito
+│   │   ├── productos.js        ✅ Gestión de productos
+│   │   ├── carrito.js          ✅ Funcionalidad del carrito
+│   │   └── checkout.js         ✅ Proceso de checkout
+│
+├── 📊 DATOS
+│   ├── data/
+│   │   └── productos.json      ✅ Base de datos de productos (10 productos de ejemplo)
+│
+├── 🖼️ IMÁGENES
+│   ├── images/
+│   │   ├── placeholder.jpg     ✅ Imagen por defecto (SVG)
+│   │   ├── products/           📁 Carpeta para fotos de productos
+│   │   ├── instagram/          📁 Carpeta para posts de Instagram
+│   │   ├── behind/             📁 Carpeta para behind the scenes
+│   │   ├── hero-bg.jpg         📷 Banner principal (agregar)
+│   │   ├── about-preview.jpg   📷 Foto para "Sobre mí" (agregar)
+│   │   └── marisol-trabajando.jpg 📷 Foto trabajando (agregar)
+│
+├── 📖 DOCUMENTACIÓN
+│   ├── README.md               ✅ Documentación completa (detallada)
+│   ├── INICIO-RAPIDO.md        ✅ Guía de inicio rápido
+│   ├── CONFIGURACION.txt       ✅ Configuración paso a paso
+│   └── ESTRUCTURA.txt          ✅ Este archivo
+│
+└── ⚙️ CONFIGURACIÓN
+    ├── .gitignore              ✅ Archivos a ignorar en Git
+    └── package.json            ✅ Configuración del proyecto
+
+
+CARACTERÍSTICAS IMPLEMENTADAS:
+==============================
+
+✅ DISEÑO Y UX:
+- Diseño responsive (mobile-first)
+- Colores suaves y femeninos (rosa, lila, celeste, beige)
+- Tipografía elegante (Playfair Display + Poppins)
+- Animaciones suaves
+- Notificaciones visuales
+- Navegación sticky
+- Menú móvil funcional
+
+✅ FUNCIONALIDADES:
+- Catálogo de productos dinámico
+- Filtros por categoría
+- Ordenamiento de productos
+- Página de detalle con galería
+- Variantes (tamaños, colores)
+- Carrito de compras (localStorage)
+- Contador de items en carrito
+- Proceso de checkout completo
+- Validación de formularios
+- Integración con WhatsApp
+- Botón flotante de WhatsApp
+
+✅ PÁGINAS:
+- Home (con hero, destacados, sobre mí, Instagram)
+- Catálogo completo
+- Detalle de producto
+- Carrito
+- Checkout
+- Sobre mí (historia, proceso, valores)
+- FAQ
+- Página de confirmación
+
+✅ OPTIMIZACIONES:
+- SEO básico (meta tags)
+- Lazy loading de imágenes
+- Performance optimizado
+- Código comentado y documentado
+- Estructura escalable
+
+✅ PREPARADO PARA:
+- Mercado Pago (estructura lista)
+- Transferencia bancaria
+- Google Analytics
+- Facebook Pixel
+- Newsletter
+- Sistema de reviews
+
+
+PRÓXIMOS PASOS:
+===============
+
+1. CONFIGURACIÓN BÁSICA:
+   □ Actualizar número de WhatsApp en js/main.js
+   □ Actualizar email de contacto
+   □ Actualizar redes sociales (Instagram, Facebook)
+
+2. CONTENIDO:
+   □ Agregar productos reales en data/productos.json
+   □ Subir fotos de productos en images/products/
+   □ Agregar foto de perfil en images/
+   □ Completar texto "Sobre mí"
+   □ Revisar y actualizar FAQ
+
+3. IMÁGENES NECESARIAS:
+   □ Productos (mínimo 5-10)
+   □ Logo (opcional)
+   □ Foto de perfil/trabajando
+   □ Posts de Instagram (4-6)
+   □ Behind the scenes (opcionales)
+
+4. PUBLICACIÓN:
+   □ Elegir plataforma (GitHub Pages, Netlify, Vercel)
+   □ Subir archivos
+   □ Probar en diferentes dispositivos
+   □ Compartir en redes sociales
+
+
+ARCHIVOS QUE DEBES EDITAR:
+==========================
+
+🔴 URGENTE (antes de publicar):
+1. js/main.js → Línea 15 (WhatsApp, email)
+2. data/productos.json → Agrega tus productos
+3. Todos los HTML → Actualiza "5491XXXXXXXXX" por tu WhatsApp
+4. Todos los HTML → Actualiza contacto@casicomoella.com
+
+🟡 IMPORTANTE (personalización):
+5. sobre-mi.html → Tu historia personal
+6. faq.html → Tus políticas y preguntas
+7. css/main.css → Colores de tu marca (opcional)
+8. images/ → Sube tus fotos
+
+🟢 OPCIONAL (mejoras):
+9. Integración con Mercado Pago
+10. Google Analytics
+11. Newsletter
+12. Blog
+
+
+COMPATIBILIDAD:
+===============
+
+✅ Navegadores soportados:
+- Chrome (últimas 2 versiones)
+- Firefox (últimas 2 versiones)
+- Safari (últimas 2 versiones)
+- Edge (últimas 2 versiones)
+- Mobile Chrome
+- Mobile Safari
+
+✅ Dispositivos:
+- Desktop (1920px+)
+- Laptop (1366px)
+- Tablet (768px)
+- Mobile (375px+)
+
+
+TECNOLOGÍAS UTILIZADAS:
+=======================
+
+📦 Frontend:
+- HTML5
+- CSS3 (Variables CSS, Flexbox, Grid)
+- JavaScript ES6+ (Vanilla, sin frameworks)
+- Font Awesome (iconos)
+- Google Fonts (tipografías)
+
+💾 Almacenamiento:
+- localStorage (carrito, configuración)
+- JSON (base de datos de productos)
+
+🎨 Diseño:
+- Mobile-first approach
+- Responsive design
+- Animaciones CSS
+- Gradientes
+
+
+SOPORTE Y AYUDA:
+================
+
+📚 Documentación:
+1. README.md → Documentación completa
+2. INICIO-RAPIDO.md → Empezar rápidamente
+3. CONFIGURACION.txt → Configuración detallada
+4. Comentarios en el código → Explicaciones inline
+
+🔍 Debugging:
+- Abre la consola (F12) para ver errores
+- Valida JSON en jsonlint.com
+- Revisa que las imágenes existan
+
+💬 Recursos:
+- GitHub Pages: pages.github.com
+- Netlify: netlify.com
+- Mercado Pago Docs: mercadopago.com.ar/developers
+
+
+CRÉDITOS:
+=========
+
+Proyecto: Casi como ella - Ecommerce Artesanal
+Versión: 1.0.0
+Fecha: 6 de febrero de 2026
+Tecnología: HTML + CSS + JavaScript
+Diseño: Artesanal, femenino, delicado
+
+
+LICENCIA:
+=========
+
+Este proyecto fue creado específicamente para "Casi como ella".
+Todos los derechos reservados.
+
+
+═══════════════════════════════════════════════════════════
+
+¡TU ECOMMERCE ESTÁ COMPLETO Y LISTO PARA USAR! 🎉
+
+Solo necesitas configurar tu WhatsApp y agregar tus productos.
+
+═══════════════════════════════════════════════════════════
+
+Para comenzar, lee: INICIO-RAPIDO.md
+Para configuración completa, lee: README.md
+
+¡Mucho éxito con tu emprendimiento! 💜

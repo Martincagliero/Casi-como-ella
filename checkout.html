@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finalizar compra - Casi como ella">
+    <title>Checkout - Casi como ella</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Logo Casi como ella" class="logo-img">
+                    <h1>Casi como ella</h1>
+                </a>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Finalizar Compra</h1>
+            <div class="checkout-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Datos</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Envío</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Pago</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Form -->
+    <section class="checkout-section">
+        <div class="container">
+            <form id="checkoutForm" class="checkout-grid">
+                <!-- Customer Information -->
+                <div class="checkout-main">
+                    <!-- Contact Information -->
+                    <div class="checkout-card">
+                        <h2><i class="fas fa-user"></i> Información de contacto</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 XXXX-XXXX" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="checkout-card">
+                        <h2><i class="fas fa-store"></i> Método de entrega</h2>
+                        
+                        <div class="shipping-options">
+                            <label class="shipping-option">
+                                <input type="radio" name="envio" value="retiro" checked>
+                                <div class="option-content">
+                                    <div class="option-title">
+                                        <i class="fas fa-store"></i>
+                                        <span>Retiro en persona</span>
+                                    </div>
+                                    <p>Gratis - Sunchales, Santa Fe (coordinar por WhatsApp)</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-card">
+                        <h2><i class="fas fa-credit-card"></i> Método de pago</h2>
+                        
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="pago" value="mercadopago" checked>
+                                <div class="option-content">
+                                    <div class="option-title">
+                                        <i class="fas fa-wallet"></i>
+                                        <span>Mercado Pago</span>
+                                    </div>
+                                    <p>Paga con tarjeta de crédito, débito o saldo en cuenta</p>
+                                    <div class="payment-logos">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                            </label>
+                            
+                            <label class="payment-option">
+                                <input type="radio" name="pago" value="transferencia">
+                                <div class="option-content">
+                                    <div class="option-title">
+                                        <i class="fas fa-university"></i>
+                                        <span>Transferencia bancaria</span>
+                                    </div>
+                                    <p>Te enviaremos los datos bancarios por email</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Additional Notes -->
+                    <div class="checkout-card">
+                        <h2><i class="fas fa-comment"></i> Notas adicionales (opcional)</h2>
+                        <div class="form-group">
+                            <textarea id="notas" name="notas" rows="4" placeholder="¿Algún detalle especial que debamos saber?"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-sidebar">
+                    <div class="order-summary sticky">
+                        <h3>Resumen del pedido</h3>
+                        
+                        <div class="order-items" id="orderItems">
+                            <!-- Items will be loaded dynamically -->
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="summarySubtotal">$0</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Envío:</span>
+                            <span id="summaryShipping">A calcular</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row summary-total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">$0</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Confirmar pedido
+                        </button>
+                        
+                        <a href="galeria.html" class="back-to-cart">
+                            <i class="fas fa-arrow-left"></i> Volver a la galería
+                        </a>
+                        
+                        <div class="secure-checkout">
+                            <i class="fas fa-lock"></i>
+                            <span>Compra segura</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Casi como ella</h3>
+                    <p>Arte en telas hecho a mano con amor y dedicación.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/casi.como.ella" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/casi.como.ella" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="sobre-mi.html">Sobre mí</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#pagos">Métodos de pago</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +54 9 11 XXXX-XXXX</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sunchales, Santa Fe</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Casi como ella. Hecho con <i class="fas fa-heart"></i> en Argentina</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">Desarrollado por <strong>Martin Cagliero</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5491XXXXXXXXX?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20tus%20creaciones" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

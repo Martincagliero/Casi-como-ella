@@ -1,0 +1,259 @@
+/* ===================================
+   GUÍA DE CONFIGURACIÓN RÁPIDA
+   =================================== 
+   
+   Este archivo contiene las configuraciones principales
+   que deberás actualizar para personalizar tu tienda.
+*/
+
+// ============================================
+// 1. INFORMACIÓN DE CONTACTO
+// ============================================
+
+WHATSAPP:
+  Formato: 54911XXXXXXXX (código país + código área sin 0 + número sin 15)
+  Ejemplo: 5491134567890
+  
+  Actualizar en:
+  - js/main.js (línea ~15)
+  - Todos los archivos HTML (buscar "5491XXXXXXXXX")
+
+EMAIL:
+  Tu email de contacto
+  
+  Actualizar en:
+  - js/main.js
+  - Footer de todos los archivos HTML
+
+TELÉFONO VISIBLE:
+  Actualizar en:
+  - Footer de todos los archivos HTML
+  - Página de contacto
+
+
+// ============================================
+// 2. REDES SOCIALES
+// ============================================
+
+INSTAGRAM:
+  - Reemplazar "@casi.como.ella" con tu usuario
+  - Actualizar enlaces en footer
+  - Actualizar en página de inicio (sección Instagram)
+
+FACEBOOK:
+  - Actualizar enlaces en footer
+  - Agregar tu página de Facebook
+
+EMAIL:
+  - contacto@casicomoella.com
+  - Actualizar en todos los archivos HTML
+
+
+// ============================================
+// 3. COLORES DE LA MARCA
+// ============================================
+
+Editar en: css/main.css (líneas 10-20)
+
+:root {
+    --rosa-pastel: #fce4ec;     /* Rosa suave */
+    --lila: #e1bee7;            /* Lila claro */
+    --celeste: #bbdefb;         /* Celeste suave */
+    --beige: #f5f5dc;           /* Beige */
+    --acento: #d81b60;          /* Color principal de botones */
+}
+
+
+// ============================================
+// 4. PRODUCTOS
+// ============================================
+
+Archivo: data/productos.json
+
+Estructura de cada producto:
+{
+  "id": número único,
+  "name": "Nombre del producto",
+  "category": "Cuadros" | "Almohadones" | "Bolsos" | "Personalizados",
+  "price": precio en pesos (número),
+  "oldPrice": null o precio anterior,
+  "shortDescription": "Descripción breve para las tarjetas",
+  "description": "Descripción completa del producto",
+  "images": ["ruta/imagen1.jpg", "ruta/imagen2.jpg"],
+  "featured": true | false,
+  "new": true | false,
+  "sale": true | false,
+  "variants": {
+    "sizes": ["30x40cm", "40x50cm"],
+    "colors": [{"name": "Rosa", "hex": "#f8bbd0"}]
+  }
+}
+
+
+// ============================================
+// 5. IMÁGENES
+// ============================================
+
+Carpetas de imágenes:
+
+images/
+  ├── products/         → Fotos de productos
+  ├── instagram/        → Posts de Instagram
+  ├── behind/           → Behind the scenes
+  ├── hero-bg.jpg       → Imagen de fondo del banner principal
+  ├── about-preview.jpg → Foto para "Sobre mí"
+  └── placeholder.jpg   → Imagen por defecto
+
+Tamaños recomendados:
+- Productos: 1000x1000px (cuadradas)
+- Hero: 1920x1080px
+- Instagram: 800x800px
+
+
+// ============================================
+// 6. TEXTOS PERSONALIZABLES
+// ============================================
+
+SLOGAN PRINCIPAL (index.html):
+  "Arte en telas hecho a mano"
+  Ubicación: Hero section
+
+SOBRE MÍ (sobre-mi.html):
+  - Editar historia personal
+  - Actualizar proceso creativo
+  - Modificar valores
+
+FAQ (faq.html):
+  - Agregar/editar preguntas
+  - Actualizar políticas de envío
+  - Modificar información de pagos
+
+
+// ============================================
+// 7. MÉTODOS DE PAGO
+// ============================================
+
+MERCADO PAGO:
+  1. Obtener credenciales en: https://www.mercadopago.com.ar/developers
+  2. Agregar Public Key en js/main.js
+  3. Configurar backend para crear preferencias de pago
+  4. Ver instrucciones completas en README.md
+
+TRANSFERENCIA BANCARIA:
+  - Actualizar datos bancarios en la respuesta del checkout
+  - Configurar email automático con datos
+
+
+// ============================================
+// 8. ENVÍOS
+// ============================================
+
+Actualizar en:
+- checkout.html
+- faq.html
+- footer (todas las páginas)
+
+Información a completar:
+- Zona de retiro (actualmente: "Zona Sur, Buenos Aires")
+- Costo de envío por zona
+- Tiempos de entrega
+- Empresas de correo utilizadas
+
+
+// ============================================
+// 9. SEO
+// ============================================
+
+En cada archivo HTML actualizar:
+
+<title>Nombre específico - Casi como ella</title>
+<meta name="description" content="Descripción única de la página">
+<meta name="keywords" content="palabras, clave, relevantes">
+
+
+// ============================================
+// 10. ANALYTICS Y TRACKING
+// ============================================
+
+Para agregar Google Analytics:
+
+En <head> de cada HTML:
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+Para agregar Facebook Pixel:
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'TU_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+
+
+// ============================================
+// 11. CHECKLIST ANTES DE PUBLICAR
+// ============================================
+
+□ Actualizar número de WhatsApp
+□ Actualizar emails de contacto
+□ Actualizar redes sociales (Instagram, Facebook)
+□ Agregar productos reales en productos.json
+□ Subir todas las imágenes de productos
+□ Reemplazar placeholder.jpg con imágenes reales
+□ Configurar Mercado Pago (si aplica)
+□ Actualizar información de envíos
+□ Revisar textos de "Sobre mí"
+□ Actualizar FAQ con información real
+□ Agregar Google Analytics (opcional)
+□ Probar en móvil, tablet y desktop
+□ Probar navegación completa
+□ Probar proceso de compra completo
+□ Verificar que WhatsApp funcione correctamente
+□ Revisar ortografía en todos los textos
+
+
+// ============================================
+// 12. DOMINIOS Y HOSTING
+// ============================================
+
+Opciones recomendadas:
+
+GRATIS:
+- GitHub Pages (ghpages.com)
+- Netlify (netlify.com)
+- Vercel (vercel.com)
+
+PAGO (con dominio propio):
+- NIC.ar + Hosting local argentino
+- Hostinger
+- SiteGround
+
+Tu dominio podría ser:
+- casicomoella.com.ar
+- casicomoella.com
+- casicomoella.shop
+
+
+// ============================================
+// ¿NECESITAS AYUDA?
+// ============================================
+
+1. Revisa el README.md para instrucciones detalladas
+2. Revisa los comentarios en el código
+3. Abre la consola del navegador (F12) para ver errores
+4. Valida tu JSON en: jsonlint.com
+
+*/

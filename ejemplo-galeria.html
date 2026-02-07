@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Renderizado - Galería</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    
+    <style>
+        .ejemplo-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+        }
+        
+        .ejemplo-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #6b4423;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .ejemplo-descripcion {
+            font-family: 'Poppins', sans-serif;
+            color: #8b6f47;
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .ejemplo-seccion {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .ejemplo-codigo {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .ejemplo-codigo .comment {
+            color: #6a9955;
+        }
+        
+        .ejemplo-codigo .string {
+            color: #ce9178;
+        }
+        
+        .ejemplo-codigo .function {
+            color: #dcdcaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="ejemplo-container">
+        <h1 class="ejemplo-titulo">📸 Ejemplo de Renderizado de Galería</h1>
+        <p class="ejemplo-descripcion">
+            Esta página muestra cómo se renderiza una categoría específica en el frontend.
+            Puedes usar este código como referencia para integrar la galería en otras páginas.
+        </p>
+
+        <!-- EJEMPLO 1: Categoría Individual -->
+        <div class="ejemplo-seccion">
+            <h2 style="font-family: 'Playfair Display', serif; color: #6b4423; margin-bottom: 1rem;">
+                1️⃣ Renderizar una categoría (Bolsos)
+            </h2>
+            
+            <p style="color: #8b6f47; margin-bottom: 1.5rem;">
+                Este ejemplo muestra cómo renderizar solo la categoría "bolsos" en un contenedor específico.
+            </p>
+            
+            <div class="ejemplo-codigo">
+<span class="comment">// HTML</span>
+&lt;div id=<span class="string">"bolsosGaleria"</span>&gt;&lt;/div&gt;
+
+<span class="comment">// JavaScript</span>
+galeria.<span class="function">init</span>().<span class="function">then</span>(() => {
+    galeria.<span class="function">renderizarCategoria</span>(<span class="string">'bolsos'</span>, <span class="string">'bolsosGaleria'</span>, {
+        mostrarTitulo: <span style="color: #569cd6;">true</span>,
+        mostrarDescripcion: <span style="color: #569cd6;">true</span>,
+        animaciones: <span style="color: #569cd6;">true</span>
+    });
+});
+            </div>
+            
+            <p style="color: #8b6f47; margin: 1.5rem 0; font-weight: 600;">Resultado:</p>
+            
+            <!-- Contenedor donde se renderiza -->
+            <div id="bolsosGaleria"></div>
+        </div>
+
+        <!-- EJEMPLO 2: Todas las categorías -->
+        <div class="ejemplo-seccion">
+            <h2 style="font-family: 'Playfair Display', serif; color: #6b4423; margin-bottom: 1rem;">
+                2️⃣ Renderizar todas las categorías
+            </h2>
+            
+            <p style="color: #8b6f47; margin-bottom: 1.5rem;">
+                Este ejemplo muestra cómo renderizar todas las categorías disponibles de una vez.
+            </p>
+            
+            <div class="ejemplo-codigo">
+<span class="comment">// HTML</span>
+&lt;div id=<span class="string">"todasCategorias"</span>&gt;&lt;/div&gt;
+
+<span class="comment">// JavaScript</span>
+galeria.<span class="function">init</span>().<span class="function">then</span>(() => {
+    galeria.<span class="function">renderizarTodasCategorias</span>(<span class="string">'todasCategorias'</span>);
+});
+            </div>
+            
+            <p style="color: #8b6f47; margin: 1.5rem 0; font-weight: 600;">Resultado:</p>
+            
+            <!-- Contenedor donde se renderiza -->
+            <div id="todasCategorias"></div>
+        </div>
+
+        <!-- EJEMPLO 3: Sin título ni descripción -->
+        <div class="ejemplo-seccion">
+            <h2 style="font-family: 'Playfair Display', serif; color: #6b4423; margin-bottom: 1rem;">
+                3️⃣ Solo imágenes (sin título ni descripción)
+            </h2>
+            
+            <p style="color: #8b6f47; margin-bottom: 1.5rem;">
+                Útil cuando quieres mostrar solo el grid de imágenes en un espacio reducido.
+            </p>
+            
+            <div class="ejemplo-codigo">
+<span class="comment">// HTML</span>
+&lt;div id=<span class="string">"cartucherasSimple"</span>&gt;&lt;/div&gt;
+
+<span class="comment">// JavaScript</span>
+galeria.<span class="function">init</span>().<span class="function">then</span>(() => {
+    galeria.<span class="function">renderizarCategoria</span>(<span class="string">'cartucheras'</span>, <span class="string">'cartucherasSimple'</span>, {
+        mostrarTitulo: <span style="color: #569cd6;">false</span>,
+        mostrarDescripcion: <span style="color: #569cd6;">false</span>
+    });
+});
+            </div>
+            
+            <p style="color: #8b6f47; margin: 1.5rem 0; font-weight: 600;">Resultado:</p>
+            
+            <!-- Contenedor donde se renderiza -->
+            <div id="cartucherasSimple"></div>
+        </div>
+
+        <!-- INFO ADICIONAL -->
+        <div class="ejemplo-seccion" style="background: linear-gradient(135deg, #6b4423 0%, #8b6f47 100%); color: white;">
+            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1rem;">
+                💡 Información Adicional
+            </h2>
+            
+            <ul style="font-family: 'Poppins', sans-serif; line-height: 2; list-style: none; padding-left: 0;">
+                <li>✅ <strong>Lazy Loading:</strong> Las imágenes se cargan solo cuando están visibles</li>
+                <li>✅ <strong>Responsive:</strong> Se adapta automáticamente a móvil, tablet y desktop</li>
+                <li>✅ <strong>Modal:</strong> Haz clic en el botón "Ver" para ampliar una imagen</li>
+                <li>✅ <strong>Animaciones:</strong> Transiciones suaves y elegantes</li>
+                <li>✅ <strong>Extensible:</strong> Fácil agregar nuevas categorías o imágenes</li>
+            </ul>
+        </div>
+
+        <!-- BACK LINK -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="galeria.html" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #d4a574 0%, #c9956f 100%); color: white; text-decoration: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3); transition: all 0.3s ease;">
+                <i class="fas fa-arrow-left"></i>
+                Ver Galería Completa
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+    <script>
+        // Inicialización de ejemplos
+        document.addEventListener('DOMContentLoaded', async () => {
+            await galeria.init();
+            
+            // Ejemplo 1: Solo bolsos
+            galeria.renderizarCategoria('bolsos', 'bolsosGaleria', {
+                mostrarTitulo: true,
+                mostrarDescripcion: true,
+                animaciones: true
+            });
+            
+            // Ejemplo 2: Todas las categorías
+            galeria.renderizarTodasCategorias('todasCategorias');
+            
+            // Ejemplo 3: Solo imágenes
+            galeria.renderizarCategoria('cartucheras', 'cartucherasSimple', {
+                mostrarTitulo: false,
+                mostrarDescripcion: false
+            });
+        });
+    </script>
+</body>
+</html>

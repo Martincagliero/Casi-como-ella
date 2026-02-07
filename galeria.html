@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de productos artesanales - Casi como ella">
+    <title>Galería - Casi como ella</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Logo Casi como ella" class="logo-img">
+                    <h1>Casi como ella</h1>
+                </a>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galería de Creaciones</h1>
+            <p>Descubre nuestras piezas artesanales únicas</p>
+        </div>
+    </section>
+
+    <!-- Filtros de Categorías -->
+    <section class="filtros-categoria">
+        <div class="container">
+            <div class="filtros-wrapper">
+                <button class="filtro-btn activo" data-categoria="todas">
+                    <i class="fas fa-th"></i>
+                    Todas
+                </button>
+                <button class="filtro-btn" data-categoria="cartucheras">
+                    <i class="fas fa-pencil-alt"></i>
+                    Cartucheras
+                </button>
+                <button class="filtro-btn" data-categoria="fundas">
+                    <i class="fas fa-laptop"></i>
+                    Fundas
+                </button>
+                <button class="filtro-btn" data-categoria="estuches">
+                    <i class="fas fa-box"></i>
+                    Estuches
+                </button>
+                <button class="filtro-btn" data-categoria="bolsos">
+                    <i class="fas fa-shopping-bag"></i>
+                    Bolsos
+                </button>
+                <button class="filtro-btn" data-categoria="otros">
+                    <i class="fas fa-star"></i>
+                    Otros
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Principal -->
+    <main class="galeria-main">
+        <div class="container">
+            <!-- Contenedor de todas las categorías -->
+            <div id="galeriaContenedor" class="galeria-contenedor">
+                <!-- Las categorías se renderizan aquí dinámicamente -->
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Te gustó algo?</h2>
+                <p>Todas nuestras piezas son únicas y hechas a mano con amor</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        Ir a Inicio
+                    </a>
+                    <a href="sobre-mi.html" class="btn btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        Conocer más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Casi como ella</h3>
+                    <p>Arte en telas hecho a mano con amor y dedicación</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@casicomo.ella</li>
+                        <li><i class="fas fa-phone"></i> +54 9 11 XXXX-XXXX</li>
+                        <li><i class="fab fa-instagram"></i> @casicomo.ella</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Casi como ella. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">Desarrollado por <strong>Martin Cagliero</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+    <script>
+        // Inicialización de la galería
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Esperar a que la galería esté lista
+            await galeria.init();
+            
+            // Renderizar todas las categorías
+            galeria.renderizarTodasCategorias('galeriaContenedor');
+
+            // Configurar filtros
+            setupFiltros();
+        });
+
+        // Sistema de filtros
+        function setupFiltros() {
+            const filtros = document.querySelectorAll('.filtro-btn');
+            const contenedor = document.getElementById('galeriaContenedor');
+
+            filtros.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Actualizar botón activo
+                    filtros.forEach(b => b.classList.remove('activo'));
+                    btn.classList.add('activo');
+
+                    const categoria = btn.dataset.categoria;
+
+                    // Filtrar categorías
+                    if (categoria === 'todas') {
+                        galeria.renderizarTodasCategorias('galeriaContenedor');
+                    } else {
+                        contenedor.innerHTML = '';
+                        galeria.renderizarCategoria(categoria, 'galeriaContenedor');
+                    }
+
+                    // Scroll suave a la galería
+                    document.querySelector('.galeria-main').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pedido confirmado - Casi como ella">
+    <title>¡Gracias por tu compra! - Casi como ella</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        .success-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .success-container {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--blanco);
+            padding: var(--spacing-xxl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .success-icon {
+            font-size: 6rem;
+            color: var(--exito);
+            margin-bottom: var(--spacing-lg);
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .success-container h1 {
+            margin-bottom: var(--spacing-md);
+            color: var(--negro);
+        }
+        
+        .success-message {
+            font-size: 1.1rem;
+            color: var(--gris-oscuro);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .order-number {
+            background: var(--gris-claro);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin: var(--spacing-lg) 0;
+            font-size: 1.2rem;
+        }
+        
+        .order-number strong {
+            color: var(--acento);
+            font-size: 1.5rem;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--lila) 100%);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin: var(--spacing-lg) 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--acento);
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .next-steps li {
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+        
+        .next-steps i {
+            color: var(--acento);
+            margin-top: 0.3rem;
+        }
+        
+        .success-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            margin-top: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--gris-claro);
+        }
+        
+        .contact-info p {
+            color: var(--gris-medio);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            background: #25D366;
+            color: white;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: var(--spacing-md);
+            transition: var(--transition);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Logo Casi como ella" class="logo-img">
+                    <h1>Casi como ella</h1>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Success Page -->
+    <section class="success-page">
+        <div class="container">
+            <div class="success-container">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h1>¡Pedido recibido con éxito!</h1>
+                
+                <p class="success-message">
+                    ¡Gracias por tu compra! Tu pedido ha sido enviado correctamente y 
+                    en breve nos pondremos en contacto contigo para coordinar el pago y la entrega.
+                </p>
+                
+                <div class="order-number">
+                    Número de pedido: <strong>#<span id="orderNumber">001</span></strong>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>📋 Próximos pasos:</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>Recibirás un email de confirmación con todos los detalles de tu pedido</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Te contactaremos por WhatsApp para confirmar los detalles del pago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Una vez confirmado el pago, preparamos tu pedido y coordinamos la entrega</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <span>¡En breve tendrás tu pieza artesanal única!</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <p>¿Tenés alguna duda o querés modificar tu pedido?</p>
+                    <a href="https://wa.me/5491XXXXXXXXX?text=Hola!%20Hice%20un%20pedido%20y%20tengo%20una%20consulta" 
+                       class="whatsapp-btn" 
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Contactanos por WhatsApp
+                    </a>
+                </div>
+                
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Volver al inicio
+                    </a>
+                    <a href="galeria.html" class="btn btn-outline">
+                        <i class="fas fa-images"></i> Ver galería
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Casi como ella</h3>
+                    <p>Arte en telas hecho a mano con amor y dedicación.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/casi.como.ella" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/casi.como.ella" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="sobre-mi.html">Sobre mí</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#pagos">Métodos de pago</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +54 9 11 XXXX-XXXX</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sunchales, Santa Fe</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Casi como ella. Hecho con <i class="fas fa-heart"></i> en Argentina</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">Desarrollado por <strong>Martin Cagliero</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate random order number
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderNumber = Math.floor(Math.random() * 9000) + 1000;
+            const orderElement = document.getElementById('orderNumber');
+            if (orderElement) {
+                orderElement.textContent = orderNumber.toString().padStart(4, '0');
+            }
+            
+            // Save order number in localStorage for email confirmation
+            localStorage.setItem('last_order_number', orderNumber);
+        });
+    </script>
+</body>
+</html>
