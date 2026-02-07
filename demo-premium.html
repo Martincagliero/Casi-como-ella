@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Ejemplo Premium - Animaciones Avanzadas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .hero {
+            background: transparent;
+        }
+        
+        .hero::before {
+            background: linear-gradient(135deg, rgba(168, 230, 216, 0.2), rgba(242, 184, 212, 0.2));
+            opacity: 0.6;
+        }
+        
+        .hero-overlay {
+            background: none;
+        }
+        
+        .demo-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hover-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .demo-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO CON TODAS LAS ANIMACIONES BÁSICAS -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-slide-down">
+                Experiencia Premium
+            </h1>
+            <p class="hero-subtitle animate-slide-down" style="animation-delay: 0.2s;">
+                Animaciones avanzadas y microinteracciones sofisticadas
+            </p>
+            <a href="#features" class="btn btn-primary animate-scale-up" style="animation-delay: 0.4s;">
+                Explorar Animaciones
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON PARALLAX Y TITLE PREMIUM -->
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="title-premium" style="margin-bottom: 3rem;">
+                Imagen con Parallax
+            </h2>
+            
+            <div class="about-grid" style="gap: 3rem; align-items: center;">
+                <!-- IMAGEN CON PARALLAX 3D -->
+                <div class="parallax-image" style="max-width: 400px; margin: 0 auto;">
+                    <img 
+                        src="https://images.unsplash.com/photo-1551431009-381d36ac3a14?w=400&h=500&fit=crop"
+                        alt="Ejemplo Premium"
+                        style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);"
+                    />
+                </div>
+                
+                <!-- TEXTO CON ANIMACIONES -->
+                <div class="scroll-animate slide-right">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">
+                        Efecto Parallax
+                    </h3>
+                    <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
+                        La imagen se mueve diferente al hacer scroll, creando un efecto 3D elegante. 
+                        Este efecto es perfecto para fotografías artesanales.
+                    </p>
+                    <button class="btn btn-animated" style="margin-top: 2rem;">
+                        Descubre Más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON HOVER PREMIUM Y CARDS -->
+    <section class="demo-section" id="features">
+        <div class="container">
+            <h2 class="title-premium" style="text-align: center; margin-bottom: 3rem;">
+                Microinteracciones Sofisticadas
+            </h2>
+            
+            <div class="hover-demo">
+                <!-- CARD 1: HOVER PREMIUM -->
+                <div class="demo-card hover-premium">
+                    <i class="fas fa-magic" style="font-size: 2.5rem; color: var(--color-3); margin-bottom: 1rem;"></i>
+                    <h3>Scale + Shadow Premium</h3>
+                    <p>
+                        Al pasar mouse, la card sube suavemente mientras aparece una glow elegante.
+                    </p>
+                    <small>Clase: <code>.hover-premium</code></small>
+                </div>
+                
+                <!-- CARD 2: IMAGE ZOOM -->
+                <div class="demo-card card-premium">
+                    <div class="image-zoom" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=300&h=200&fit=crop" alt="Zoom" />
+                    </div>
+                    <h3>Image Zoom</h3>
+                    <p>
+                        Las imágenes crecen suavemente al hover para un efecto visual atractivo.
+                    </p>
+                    <small>Clase: <code>.image-zoom</code></small>
+                </div>
+                
+                <!-- CARD 3: ICON PULSE -->
+                <div class="demo-card hover-premium">
+                    <i class="fas fa-heart icon-pulse" style="font-size: 2.5rem; color: var(--color-3); margin-bottom: 1rem;"></i>
+                    <h3>Icon Pulse</h3>
+                    <p>
+                        Los iconos pulsan suavemente de forma continua, atrayendo atención delicadamente.
+                    </p>
+                    <small>Clase: <code>.icon-pulse</code></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON BOTONES ANIMADOS -->
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="title-premium" style="text-align: center; margin-bottom: 3rem;">
+                Botones Avanzados
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <!-- BOTÓN CON UNDERLINE DINÁMICO -->
+                <div style="text-align: center;">
+                    <button class="btn btn-primary btn-animated" style="margin-bottom: 1rem;">
+                        Underline Dinámico
+                    </button>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        Línea que corre de izquierda a derecha
+                    </p>
+                </div>
+                
+                <!-- BOTÓN CON GRADIENTE ANIMADO -->
+                <div style="text-align: center;">
+                    <button class="btn btn-gradient-shift" style="margin-bottom: 1rem;">
+                        Fondo Animado
+                    </button>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        Fondo con colores que cambian lentamente
+                    </p>
+                </div>
+                
+                <!-- BOTÓN CON RIPPLE -->
+                <div style="text-align: center;">
+                    <button class="btn btn-primary btn-ripple" style="margin-bottom: 1rem;">
+                        Ripple Effect
+                    </button>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        Onda que expande al hacer clic
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON DIVIDER Y NÚMEROS -->
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="title-premium" style="text-align: center; margin-bottom: 2rem;">
+                Decoraciones Elegantes
+            </h2>
+            
+            <!-- DIVIDER DECORATIVO -->
+            <div class="section-divider">
+                <div class="section-divider-icon">
+                    ✨
+                </div>
+            </div>
+            
+            <!-- NUMBERS CON CONTADOR -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 3rem; text-align: center;">
+                <div>
+                    <div class="counter" data-target="150" data-duration="2000" style="font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, var(--color-2), var(--color-3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        0
+                    </div>
+                    <p style="margin-top: 1rem; color: #666;">
+                        Clientes Felices
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="counter" data-target="300" data-duration="2000" style="font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, var(--color-3), var(--color-4)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        0
+                    </div>
+                    <p style="margin-top: 1rem; color: #666;">
+                        Obras Creadas
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="counter" data-target="5" data-duration="2000" style="font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, var(--color-4), var(--color-1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        0
+                    </div>
+                    <p style="margin-top: 1rem; color: #666;">
+                        Años de Experiencia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON ELEMENTOS FLOTANTES -->
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="title-premium" style="text-align: center; margin-bottom: 3rem;">
+                Elementos Decorativos
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; text-align: center;">
+                <div class="float-animation" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <p>Elemento Flotante</p>
+                </div>
+                
+                <div class="float-animation" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); animation-delay: 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💎</div>
+                    <p>Flotante Delay</p>
+                </div>
+                
+                <div class="float-animation" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); animation-delay: 0.6s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                    <p>Flotante Más</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CON BLUR TRANSITION -->
+    <section class="demo-section" style="background: linear-gradient(135deg, rgba(168,230,216,0.1), rgba(242,184,212,0.1)); border-radius: 12px; margin: 3rem 0;">
+        <div class="container" style="padding: 3rem 0;">
+            <div class="section-fade-enter">
+                <h2 class="title-premium" style="text-align: center; margin-bottom: 1.5rem;">
+                    Transición Suave
+                </h2>
+                <p style="text-align: center; font-size: 1.1rem; color: #666;">
+                    Esta sección entera se desvanece elegantemente al hacer scroll.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FINAL -->
+    <section class="demo-section">
+        <div class="container" style="text-align: center;">
+            <h2 class="title-premium" style="margin-bottom: 2rem;">
+                Lista de Todas las Animaciones Premium
+            </h2>
+            
+            <div style="background: white; padding: 2rem; border-radius: 12px; text-align: left; overflow-x: auto;">
+                <ul style="list-style: none; columns: 2; gap: 2rem;">
+                    <li style="margin-bottom: 1rem;">✅ <strong>.parallax-image</strong> - Efecto 3D en imágenes</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.title-premium</strong> - Underline dinámico en títulos</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.hover-premium</strong> - Scale + shadow elegante</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.card-premium</strong> - Hover profundo en cards</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.btn-animated</strong> - Botón con underline corre</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.btn-gradient-shift</strong> - Botón fondo animado</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.btn-ripple</strong> - Ripple effect en click</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.image-zoom</strong> - Zoom suave en imágenes</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.icon-pulse</strong> - Pulso continuo sutil</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.float-animation</strong> - Movimiento flotante</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.section-divider</strong> - Divider decorativo</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.section-fade-enter</strong> - Fade + translate</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.counter</strong> - Números animados</li>
+                    <li style="margin-bottom: 1rem;">✅ <strong>.decorative-line</strong> - Línea shimmer</li>
+                    <li style="margin-bottom: 1rem;">✅ Parallax automático al scroll</li>
+                    <li style="margin-bottom: 1rem;">✅ Intersection Observer en todo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/animations-premium.js"></script>
+</body>
+</html>

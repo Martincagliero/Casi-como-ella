@@ -459,3 +459,524 @@ textarea,
 select {
     transition: all 0.3s ease-out;
 }
+
+/* ===================================
+   ANIMACIONES AVANZADAS PREMIUM
+   Microinteracciones sofisticadas
+   =================================== */
+
+/* === PARALLAX EFFECT === */
+
+.parallax-image {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.parallax-image img {
+    transform: translateZ(-100px) scale(1.2);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.parallax-image:hover img {
+    transform: translateZ(0) scale(1.1);
+}
+
+@supports not (transform-style: preserve-3d) {
+    .parallax-image img {
+        transform: scale(1.05);
+    }
+    .parallax-image:hover img {
+        transform: scale(1.08);
+    }
+}
+
+/* === BOTÓN ANIMADO CON UNDERLINE DINÁMICO === */
+
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    transition: left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-animated:hover::before {
+    left: 100%;
+}
+
+.btn-animated::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        var(--color-1), 
+        var(--color-2), 
+        var(--color-3), 
+        var(--color-4));
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    animation: gradientShift 8s ease-in-out paused;
+}
+
+.btn-animated:hover::after {
+    opacity: 0.15;
+    animation-play-state: running;
+}
+
+/* === BOTÓN CON FONDO ANIMADO === */
+
+.btn-gradient-shift {
+    position: relative;
+    background-size: 200% 200%;
+    animation: gradientPulse 6s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes gradientPulse {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.btn-gradient-shift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(242, 184, 212, 0.3);
+    animation-duration: 3s;
+}
+
+/* === SCALE + SHADOW PREMIUM === */
+
+.hover-premium {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-premium:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 
+        0 0 30px rgba(168, 230, 216, 0.3),
+        0 8px 32px rgba(242, 184, 212, 0.2);
+}
+
+/* === BLUR TRANSITION BETWEEN SECTIONS === */
+
+.section-transition {
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.section-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, 
+        rgba(168, 230, 216, 0.1), 
+        transparent,
+        rgba(242, 184, 212, 0.1));
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.section-transition:hover::before {
+    opacity: 1;
+}
+
+/* === FLOATING ELEMENTS === */
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    25% {
+        transform: translateY(-12px) translateX(-3px);
+    }
+    50% {
+        transform: translateY(0px) translateX(0px);
+    }
+    75% {
+        transform: translateY(-8px) translateX(3px);
+    }
+}
+
+/* === DECORATIVE LINE ANIMATION === */
+
+.decorative-line {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--color-3),
+        transparent);
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.decorative-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent);
+    animation: shimmerLine 2s infinite;
+}
+
+@keyframes shimmerLine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* === BLUR ENTRANCE/EXIT === */
+
+.blur-enter {
+    animation: blurEnter 0.8s ease-out forwards;
+}
+
+@keyframes blurEnter {
+    from {
+        opacity: 0;
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.blur-exit {
+    animation: blurExit 0.8s ease-in forwards;
+}
+
+@keyframes blurExit {
+    from {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    to {
+        opacity: 0;
+        filter: blur(8px);
+    }
+}
+
+/* === CARD HOVER WITH DEPTH === */
+
+.card-premium {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-premium::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.5), 
+        transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.card-premium:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.12),
+        0 0 40px rgba(168, 230, 216, 0.2);
+}
+
+.card-premium:hover::before {
+    opacity: 1;
+}
+
+/* === IMAGE ZOOM ON HOVER === */
+
+.image-zoom {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-zoom img {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.image-zoom:hover img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+/* === TITLE REVEAL WITH UNDERLINE === */
+
+.title-premium {
+    position: relative;
+    display: inline-block;
+}
+
+.title-premium::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-3), var(--color-2));
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.title-premium:hover::after,
+.title-premium.in-view::after {
+    width: 100%;
+}
+
+/* === ICON PULSE === */
+
+.icon-pulse {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.12);
+        opacity: 0.8;
+    }
+}
+
+/* === BUTTON RIPPLE EFFECT === */
+
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.btn-ripple:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* === SECTION FADE WITH TRANSLATE === */
+
+.section-fade-enter {
+    animation: sectionFadeEnter 1s ease-out forwards;
+}
+
+@keyframes sectionFadeEnter {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === NUMBER COUNTER ANIMATION === */
+
+.counter {
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--color-2), var(--color-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.counter.active {
+    animation: countUp 0.8s ease-out forwards;
+}
+
+/* === SMOOTH SECTION DIVIDER === */
+
+.section-divider {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(242, 184, 212, 0.5), transparent);
+    top: 50%;
+}
+
+.section-divider::before {
+    left: 0;
+    animation: expandLeft 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.section-divider::after {
+    right: 0;
+    animation: expandRight 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes expandLeft {
+    to {
+        width: calc(50% - 40px);
+    }
+}
+
+@keyframes expandRight {
+    to {
+        width: calc(50% - 40px);
+    }
+}
+
+.section-divider-icon {
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: scaleIcon 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes scaleIcon {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+
+@media (max-width: 768px) {
+    .parallax-image img {
+        transform: translateZ(-50px) scale(1.15);
+    }
+
+    .parallax-image:hover img {
+        transform: translateZ(0) scale(1.05);
+    }
+
+    .card-premium:hover {
+        transform: translateY(-8px) scale(1.01);
+    }
+
+    .image-zoom:hover img {
+        transform: scale(1.05) rotate(0deg);
+    }
+
+    .float-animation {
+        animation: floatMobile 3s ease-in-out infinite;
+    }
+
+    @keyframes floatMobile {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+}
+
+/* === ACCESIBILIDAD === */
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-image img,
+    .btn-animated,
+    .btn-gradient-shift,
+    .hover-premium,
+    .float-animation,
+    .image-zoom img,
+    .section-divider::before,
+    .section-divider::after,
+    .section-divider-icon,
+    .card-premium {
+        animation: none !important;
+        transition: none !important;
+    }
+}
