@@ -359,11 +359,11 @@
 
 .process-number {
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--verde-agua) 0%, var(--verde-agua-oscuro) 100%);
     color: var(--blanco);
     border-radius: 50%;
@@ -371,7 +371,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     box-shadow: var(--shadow-sm);
 }
 
