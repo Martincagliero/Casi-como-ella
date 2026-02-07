@@ -163,7 +163,7 @@ class GaleriaManager {
      */
     crearItemGaleria(imagen, index, animaciones = true) {
         const item = document.createElement('div');
-        item.className = 'galeria-item';
+        item.className = 'galeria-item image-zoom';
         
         if (animaciones) {
             item.style.animationDelay = `${index * 0.01}s`;
@@ -171,7 +171,7 @@ class GaleriaManager {
 
         // Contenedor de la imagen
         const imgContainer = document.createElement('div');
-        imgContainer.className = 'galeria-img-container';
+        imgContainer.className = 'galeria-img-container hover-premium';
 
         // Imagen
         const img = document.createElement('img');

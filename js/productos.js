@@ -36,7 +36,7 @@ async function loadProducts() {
 // === CREATE PRODUCT CARD ===
 function createProductCard(product) {
     const card = document.createElement('div');
-    card.className = 'product-card';
+    card.className = 'product-card hover-premium card-premium';
     
     const badge = product.new ? '<span class="product-badge">Nuevo</span>' : 
                   product.sale ? '<span class="product-badge">Oferta</span>' : '';
@@ -47,7 +47,7 @@ function createProductCard(product) {
         : `<span class="product-price">${formatPrice(product.price)}</span>`;
     
     card.innerHTML = `
-        <div class="product-image">
+        <div class="product-image image-zoom">
             <img src="${product.images[0]}" alt="${product.name}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
             ${badge}
         </div>
@@ -61,7 +61,7 @@ function createProductCard(product) {
                 <div class="product-price-container">
                     ${priceHTML}
                 </div>
-                <button class="btn-add-to-cart" onclick="addToCartFromCard(${product.id})">
+                <button class="btn-add-to-cart btn-ripple" onclick="addToCartFromCard(${product.id})">
                     <i class="fas fa-shopping-bag"></i>
                 </button>
             </div>
