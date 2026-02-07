@@ -180,7 +180,7 @@
 .galeria-img-container {
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* Aspect ratio 1:1 */
+    padding-bottom: 0;
     background: #f5f0eb;
     border-radius: var(--galeria-border-radius);
     overflow: hidden;
@@ -193,12 +193,10 @@
 }
 
 .galeria-img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    display: block;
     transition: var(--galeria-transition);
     opacity: 0;
 }
