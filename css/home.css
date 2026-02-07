@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--verde-agua-claro) 30%, var(--lila) 70%, var(--celeste) 100%);
+    background: transparent;
     overflow: hidden;
 }
 
@@ -21,10 +21,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(168, 230, 216, 0.2) 0%, rgba(133, 220, 199, 0.15) 30%, rgba(242, 184, 212, 0.2) 70%, rgba(240, 213, 204, 0.15) 100%);
+    opacity: 0.6;
 }
 
 .hero-overlay {
@@ -33,7 +31,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(252, 228, 236, 0.8) 0%, rgba(128, 222, 234, 0.3) 50%, rgba(225, 190, 231, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.2) 100%);
+    mix-blend-mode: screen;
 }
 
 .hero-content {

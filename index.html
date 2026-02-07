@@ -21,6 +21,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <!-- Header -->
@@ -58,11 +59,11 @@
     <section class="about-preview">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
+                <div class="about-image scroll-animate slide-left">
                     <img src="images/marisol.jpeg" alt="Marisol trabajando en sus creaciones" onerror="this.src='images/placeholder.jpg'">
                 </div>
-                <div class="about-text">
-                    <h2>Hola, soy Marisol</h2>
+                <div class="about-text scroll-animate slide-right">
+                    <h2 class="line-animate">Hola, soy Marisol</h2>
                     <p class="about-intro">
                         Bienvenidos a mi pequeño rincón creativo. Soy una apasionada del arte textil 
                         y cada pieza que creo nace de la inspiración del día a día, de los colores 
@@ -110,7 +111,7 @@
             
             <div class="instagram-grid">
                 <!-- Instagram feed - en producción usar API o widget oficial -->
-                <a href="https://instagram.com/casi.como.ella" target="_blank" class="instagram-post">
+                <a href="https://instagram.com/casi.como.ella" target="_blank" class="instagram-post scroll-animate scale-up">
                     <img src="images/logo.jpg" alt="Instagram post" onerror="this.src='images/placeholder.jpg'">
                     <div class="instagram-overlay">
                         <i class="fab fa-instagram"></i>
@@ -182,5 +183,6 @@
     <!-- Scripts -->
     <script src="js/performance.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

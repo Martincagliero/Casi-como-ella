@@ -1,0 +1,461 @@
+/* ===================================
+   ANIMACIONES Y EFECTOS VISUALES
+   Diseño elegante, sutil y artesanal
+   =================================== */
+
+/* === FONDO DINÁMICO ANIMADO === */
+:root {
+    /* Paleta de colores elegantes y sofisticados */
+    --color-1: #a8e6d8;      /* verde agua suave */
+    --color-2: #85dcc7;      /* verde menta delicado */
+    --color-3: #f2b8d4;      /* rosado suave elegante */
+    --color-4: #f0d5cc;      /* nude/rosado pastel premium */
+}
+
+body {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        var(--color-1) 0%,
+        var(--color-2) 25%,
+        var(--color-3) 50%,
+        var(--color-4) 75%,
+        var(--color-1) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 28s ease-in-out infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 25%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pseudo-elemento para mejorar el efecto */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(168, 230, 216, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, rgba(242, 184, 212, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: shimmer 22s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 0.6;
+        filter: blur(0px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: blur(1.5px);
+    }
+}
+
+/* === ANIMACIONES DE SCROLL (FADE-IN, SLIDE-UP, SCALE) === */
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide up */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide down */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide left */
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide right */
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale subtle */
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === CLASES DE ANIMACIÓN === */
+
+/* Elementos visibles por defecto (sin scroll observer) */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideRight 0.8s ease-out forwards;
+}
+
+.animate-scale-up {
+    animation: scaleUp 0.8s ease-out forwards;
+}
+
+/* Estados iniciales para elementos con scroll observer */
+.scroll-animate {
+    opacity: 0;
+}
+
+.scroll-animate.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.scroll-animate.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.scroll-animate.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideLeft 0.8s ease-out forwards;
+}
+
+.scroll-animate.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideRight 0.8s ease-out forwards;
+}
+
+.scroll-animate.scale-up {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: scaleUp 0.8s ease-out forwards;
+}
+
+/* === ANIMACIONES ESCALONADAS (STAGGER) === */
+
+/* Atrasos en cascada para elementos hermanos */
+.stagger-item {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stagger-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.stagger-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.stagger-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(n+6) {
+    animation-delay: 0.5s;
+}
+
+/* Para scroll observer con stagger */
+.scroll-stagger {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.scroll-stagger.active {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.scroll-stagger:nth-child(1).active {
+    animation-delay: 0s;
+}
+
+.scroll-stagger:nth-child(2).active {
+    animation-delay: 0.1s;
+}
+
+.scroll-stagger:nth-child(3).active {
+    animation-delay: 0.2s;
+}
+
+.scroll-stagger:nth-child(4).active {
+    animation-delay: 0.3s;
+}
+
+.scroll-stagger:nth-child(5).active {
+    animation-delay: 0.4s;
+}
+
+.scroll-stagger:nth-child(n+6).active {
+    animation-delay: 0.5s;
+}
+
+/* === HOVER EFFECTS === */
+
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+}
+
+.hover-scale {
+    transition: transform 0.3s ease-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease-out;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(248, 189, 196, 0.4);
+}
+
+/* === PULSE/GLOW SUBTLE === */
+
+@keyframes subtlePulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+}
+
+.pulse-subtle {
+    animation: subtlePulse 3s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 0px rgba(248, 189, 196, 0));
+    }
+    50% {
+        filter: drop-shadow(0 0 8px rgba(248, 189, 196, 0.3));
+    }
+}
+
+.glow-subtle {
+    animation: subtleGlow 4s ease-in-out infinite;
+}
+
+/* === RESPETO A PREFERENCIAS DE ACCESIBILIDAD === */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    body {
+        animation: none;
+        background: linear-gradient(135deg, var(--color-1), var(--color-2), var(--color-3), var(--color-4));
+        background-size: auto;
+    }
+    
+    body::before {
+        animation: none;
+    }
+
+    .hover-lift,
+    .hover-scale,
+    .hover-glow {
+        transition: none;
+    }
+
+    .pulse-subtle,
+    .glow-subtle {
+        animation: none;
+    }
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+
+@media (max-width: 768px) {
+    /* Animaciones más rápidas en mobile para mejor UX */
+    .animate-fade-in,
+    .scroll-animate.fade-in,
+    .animate-slide-up,
+    .scroll-animate.slide-up,
+    .animate-slide-left,
+    .scroll-animate.slide-left,
+    .animate-slide-right,
+    .scroll-animate.slide-right,
+    .animate-scale-up,
+    .scroll-animate.scale-up {
+        animation-duration: 0.6s;
+    }
+
+    /* Reducir stagger delays en mobile */
+    .stagger-item:nth-child(2) {
+        animation-delay: 0.05s;
+    }
+
+    .stagger-item:nth-child(3) {
+        animation-delay: 0.1s;
+    }
+
+    .stagger-item:nth-child(4) {
+        animation-delay: 0.15s;
+    }
+
+    .stagger-item:nth-child(5) {
+        animation-delay: 0.2s;
+    }
+
+    .stagger-item:nth-child(n+6) {
+        animation-delay: 0.25s;
+    }
+}
+
+/* === LÍNEA DECORATIVA ANIMADA === */
+
+.line-animate::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(248, 189, 196, 0.6), 
+        transparent);
+    margin-top: 1rem;
+    animation: lineSlide 1.5s ease-in-out;
+}
+
+@keyframes lineSlide {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* === ENTRADA ELEGANTE PARA TEXTOS === */
+
+.text-reveal {
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    animation: textReveal 0.8s ease-out forwards;
+}
+
+@keyframes textReveal {
+    0% {
+        opacity: 0;
+        letter-spacing: -0.5em;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 0;
+    }
+}
+
+/* === SMOOTH SCROLL (ya en main.css pero reforzamos) === */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* === TRANSICIONES SUAVES POR DEFECTO === */
+
+a,
+button,
+input,
+textarea,
+select {
+    transition: all 0.3s ease-out;
+}
